@@ -8,6 +8,7 @@ end
 
 gem 'whenever', require: false
 gem 'chartkick'
+gem 'groupdate'
 
 
 # Gemovi za data table izgled

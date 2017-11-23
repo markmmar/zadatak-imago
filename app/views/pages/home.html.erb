@@ -30,3 +30,6 @@
 
 	<%= link_to "Manage all companies", "/companies", class: "btn btn-success" %>
  
+
+<h2><strong>Chart of inactive companies</strong></h2>
+    <%= area_chart Company.group_by_month(:deleted).count %>

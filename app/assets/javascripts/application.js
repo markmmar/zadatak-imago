@@ -16,4 +16,6 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require dataTables/jquery.dataTables
+//= require Chart.bundle
+//= require chartkick
 //= require_tree .
