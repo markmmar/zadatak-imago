@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Companies</h1>
+<h2><strong>List of all companies</strong></h2>
 
-<table id="companies">
+<table id="companies" class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -17,12 +17,12 @@
     <% @companies.each do |company| %>
       <tr>
         <td><%= company.name %></td>
-        <td><%= company.comment %></td>
+        <td><%= truncate(company.comment, length:100) %></td>
         <td><%= company.active %></td>
         <td><%= company.deleted %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><strong><%= link_to 'Show', company %></strong></td>
+        <td><strong><%= link_to 'Edit', edit_company_path(company) %></strong></td>
+        <td><strong><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></strong></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,10 @@
 
 <br>
 
+  <ul class="nav nav-pills">
+    <li class="active">
 <%= link_to 'New Company', new_company_path %>
+    </li>
+  </ul>
+
+</br>
